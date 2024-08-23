@@ -16,6 +16,7 @@ func generateSlice(max, size int) []int {
 
 func BenchmarkBubbleSort(b *testing.B) {
 	b.Run("small arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(10, 10)
@@ -26,6 +27,7 @@ func BenchmarkBubbleSort(b *testing.B) {
 	})
 
 	b.Run("middle arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(100, 1000)
@@ -36,6 +38,7 @@ func BenchmarkBubbleSort(b *testing.B) {
 	})
 
 	b.Run("big arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(10000, 100000)
@@ -48,6 +51,7 @@ func BenchmarkBubbleSort(b *testing.B) {
 
 func BenchmarkSelectionSort(b *testing.B) {
 	b.Run("small arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(10, 10)
@@ -58,6 +62,7 @@ func BenchmarkSelectionSort(b *testing.B) {
 	})
 
 	b.Run("middle arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(100, 1000)
@@ -68,6 +73,7 @@ func BenchmarkSelectionSort(b *testing.B) {
 	})
 
 	b.Run("big arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(10000, 100000)
@@ -80,6 +86,7 @@ func BenchmarkSelectionSort(b *testing.B) {
 
 func BenchmarkInsertionSort(b *testing.B) {
 	b.Run("small arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(10, 10)
@@ -90,6 +97,7 @@ func BenchmarkInsertionSort(b *testing.B) {
 	})
 
 	b.Run("middle arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(100, 1000)
@@ -100,6 +108,7 @@ func BenchmarkInsertionSort(b *testing.B) {
 	})
 
 	b.Run("big arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(10000, 100000)
@@ -112,6 +121,7 @@ func BenchmarkInsertionSort(b *testing.B) {
 
 func BenchmarkMergeSort(b *testing.B) {
 	b.Run("small arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(10, 10)
@@ -122,6 +132,7 @@ func BenchmarkMergeSort(b *testing.B) {
 	})
 
 	b.Run("middle arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(100, 1000)
@@ -132,6 +143,7 @@ func BenchmarkMergeSort(b *testing.B) {
 	})
 
 	b.Run("big arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(10000, 100000)
@@ -144,6 +156,7 @@ func BenchmarkMergeSort(b *testing.B) {
 
 func BenchmarkQuickSort(b *testing.B) {
 	b.Run("small arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(10, 10)
@@ -154,6 +167,7 @@ func BenchmarkQuickSort(b *testing.B) {
 	})
 
 	b.Run("middle arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(100, 1000)
@@ -164,6 +178,7 @@ func BenchmarkQuickSort(b *testing.B) {
 	})
 
 	b.Run("big arrays", func(b *testing.B) {
+		b.ReportAllocs()
 		b.StopTimer()
 		for i := 0; i < b.N; i++ {
 			ar := generateSlice(10000, 100000)
