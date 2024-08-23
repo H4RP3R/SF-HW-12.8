@@ -12,7 +12,7 @@ const (
 	testArrMaxSize = 150
 	testArrMinVal  = -100
 	testArrMaxVal  = 100
-	testsCount     = 100
+	testsCount     = 1000
 )
 
 func randomIntArr(size, min, max int) []int {
